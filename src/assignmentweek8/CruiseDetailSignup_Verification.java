@@ -57,6 +57,7 @@ public class CruiseDetailSignup_Verification {
 		}
 
 		return isValid;
+
 	}
 
 	public void updateUserName(String userName, String newUserName) {
@@ -74,6 +75,7 @@ public class CruiseDetailSignup_Verification {
 			this.password = newPassword;
 		}
 	}
+
 	public String getUpdatedPassword() {
 		return password;
 	}
