@@ -14,7 +14,8 @@ public class GuessTheStudent {
 		String line;
 		FileReader fileReader = new FileReader(f);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
-		while ((line = bufferedReader.readLine()) != null) {
+		line = bufferedReader.readLine();
+		while (line != null) {
 			System.out.println(line);
 
 		}
@@ -29,7 +30,7 @@ public class GuessTheStudent {
 		}
 
 		Random random = new Random();
-		int randomNum = random.nextInt(14);
+		int randomNum = random.nextInt(randomNames.length);
 		String word = (randomNames[randomNum]);
 		String word1 = word.toUpperCase();
 
