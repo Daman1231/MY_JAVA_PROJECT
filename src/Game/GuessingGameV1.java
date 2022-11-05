@@ -1,4 +1,4 @@
-package Game_Practice_Testing;
+package Game;
 import java.io.*;
 import java.util.*;
 
