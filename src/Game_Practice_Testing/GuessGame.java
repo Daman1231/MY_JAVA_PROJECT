@@ -45,25 +45,31 @@ public class GuessGame {
 			wrongGuess++;
 			wrongChar = wrongChar + " " + guess;
 			System.out.println("You have guesed " + wrongGuess + " Wrong Letter" + wrongChar);
+
 		}
+
 		if (maskName.equalsIgnoreCase(randomName)) {
 			System.out.println("Congratulation");
 			System.out.println("You are Guessing " + maskName + " Correctly.");
 			System.out.println("Winner Winner Chicken Dinner");
 		}
+
 	}
 
 	public void guessGame(String randomName) {
 		String guess = "";
 		Scanner sc = new Scanner(System.in);
 		// System.out.println(randomName);
+		System.out.println("Welcome to 'Guess The Student' Game by Daman \nEnjoy Playing...");
 		while (wrongGuess < 5 && !maskName.equals(randomName)) {
 			System.out.println("You are Guessing " + maskName);
 			System.out.println("Guess a Letter: ");
 			guess = sc.nextLine();
 			isCharPresentInName(randomName, guess);
+			if(wrongGuess>4) {
+				System.out.println("Sorry You have exceeded the number of Wrong guesses, Please Try again later....");
+			}
 		}
-
 	}
 
 }
