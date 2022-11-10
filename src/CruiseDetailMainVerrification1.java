@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class CruiseDetailMainVerrification {
+public class CruiseDetailMainVerrification1 {
 	public static void main(String[] args) {
 		String email;
 		int password;
@@ -24,7 +24,7 @@ public class CruiseDetailMainVerrification {
 		phoneNum = sc.next();
 		System.out.println("Thank you for registering!");
 		
-		CruiseDetailSignup_Verification detailSignup_Verification = new CruiseDetailSignup_Verification(email, password, name, phoneNum);
+		CruiseDetailSignup_Verification1 detailSignup_Verification = new CruiseDetailSignup_Verification1(email, password, name, phoneNum);
 		detailSignup_Verification.setEmailID(email);
 		detailSignup_Verification.getEmailID();
 		
@@ -38,11 +38,11 @@ public class CruiseDetailMainVerrification {
 		String again;
 		String cruiseSelec;
 		int index = 0;
-		CruiseDetails scenicCruise = new CruiseDetails("Scenic Cruise", 43.99, 12.99, 3);
-		CruiseDetails sunsetCruise = new CruiseDetails("Sunset Cruise", 52.99, 15.99, 1);
-		CruiseDetails discoveryCruise = new CruiseDetails("Discovery Cruise", 39.99, 9.99, 4);
-		CruiseDetails mysteryCruise = new CruiseDetails("Mystery Cruise", 45.99, 12.99, 2);
-		CruiseDetails[] cruiseDetails = { scenicCruise, sunsetCruise, discoveryCruise, mysteryCruise };
+		CruiseDetailsVerification1 scenicCruise = new CruiseDetailsVerification1("Scenic Cruise", 43.99, 12.99, 3);
+		CruiseDetailsVerification1 sunsetCruise = new CruiseDetailsVerification1("Sunset Cruise", 52.99, 15.99, 1);
+		CruiseDetailsVerification1 discoveryCruise = new CruiseDetailsVerification1("Discovery Cruise", 39.99, 9.99, 4);
+		CruiseDetailsVerification1 mysteryCruise = new CruiseDetailsVerification1("Mystery Cruise", 45.99, 12.99, 2);
+		CruiseDetailsVerification1[] cruiseDetails = { scenicCruise, sunsetCruise, discoveryCruise, mysteryCruise };
 
 		do {
 			System.out.println(

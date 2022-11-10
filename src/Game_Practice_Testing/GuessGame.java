@@ -37,7 +37,11 @@ public class GuessGame {
 		String guessUpperCase = guess.toUpperCase();
 		for (int i = 0; i < randomName.length(); i++) {
 			if (randomName.charAt(i) == guessLowerCase.charAt(0) || randomName.charAt(i) == guessUpperCase.charAt(0)) {
-				maskName = maskName.substring(0, i) + randomName.charAt(i) + maskName.substring(i + 1);
+				//maskName = maskName.substring(0, i) + randomName.charAt(i) + maskName.substring(i + 1);
+				String s1 = maskName.substring(0, i);
+				char s2 = randomName.charAt(i);
+				String s3 = maskName.substring(i + 1);
+				maskName = s1 + s2 + s3;
 				isGuessCorrect = true;
 			}
 		}

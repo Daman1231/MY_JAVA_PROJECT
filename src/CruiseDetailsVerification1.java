@@ -2,7 +2,7 @@
 
 import java.text.DecimalFormat;
 
-public class CruiseDetailsVerification {
+public class CruiseDetailsVerification1 {
 	String cruiseSelection;
 	double priceForAdult;
 	double priceForchildren;
@@ -12,7 +12,7 @@ public class CruiseDetailsVerification {
 	double buffetForChildren;
 	DecimalFormat df = new DecimalFormat("0.00");
 
-	public CruiseDetailsVerification(String SelectCruise, double adultPrice, double childrenPrice, int numOfDay) {
+	public CruiseDetailsVerification1(String SelectCruise, double adultPrice, double childrenPrice, int numOfDay) {
 		cruiseSelection = SelectCruise;
 		priceForAdult = adultPrice;
 		priceForchildren = childrenPrice;

@@ -1,12 +1,12 @@
 
-public class CruiseDetailSignup_Verification {
+public class CruiseDetailSignup_Verification1 {
 
 	String emailID;
 	int password;
 	String fullName;
 	String phoneNumber;
 
-	public CruiseDetailSignup_Verification(String email, int pass, String fullNam, String mobileNum) {
+	public CruiseDetailSignup_Verification1(String email, int pass, String fullNam, String mobileNum) {
 		emailID = email;
 		password = pass;
 		fullName = fullNam;
