@@ -9,13 +9,12 @@ public class Hotel extends UserDetail {
 	double adultBuffetPrice;
 	double childrenBuffetPrice;
 	int noOfStayDays;
+	Scanner sc = new Scanner(System.in);
 
-	public void hotelSelection() {
+	private void hotelSelection() {
 		do {
 			System.out.println("We Have 2 different Suites available in Hotel. Delux Suite and Family Suite");
-			Scanner sc = new Scanner(System.in);
-			String selectHotel = sc.nextLine();
-			this.selection = selectHotel;
+			selection = sc.nextLine();
 			if (selection.equalsIgnoreCase("Delux Suite")) {
 				Deluxe_Suite deluxe_Suite = new Deluxe_Suite();
 				deluxe_Suite.deluxDetail();
@@ -30,19 +29,17 @@ public class Hotel extends UserDetail {
 		} while (!(selection.equalsIgnoreCase("Delux Suite") || selection.equalsIgnoreCase("Family Suite")));
 	}
 
-	public void noOfPeople() {
-		Scanner sc = new Scanner(System.in);
+	private void noOfPeople() {
 		System.out.println("Enter Number of Adults: ");
 		adults = sc.nextInt();
 		System.out.println("Enter Number of Children: ");
 		children = sc.nextInt();
-
 	}
 
-	public void addBuffet() {
+	private void addBuffet() {
+
 		System.out.println(
-				"All rooms come with free breakfast. Do you want to add lunch in your room as well at a discounted pre-booking rate of $25/ adult and $5/ child.");
-		Scanner sc = new Scanner(System.in);
+				"All rooms come with free breakfast. Do you want to add lunch in your room as well at a discounted pre-booking rate of $25/ adult and $5/ child. Yes/No");
 		String needBuffet = sc.next();
 		System.out.println("Enter the Number of Days you want to stay: ");
 		noOfStayDays = sc.nextInt();
@@ -53,11 +50,13 @@ public class Hotel extends UserDetail {
 	}
 
 	public void output() {
+		hotelSelection();
+		noOfPeople();
+		addBuffet();
 		double priceOfSuite = noOfStayDays * price;
 		double buffetPriceForAdult = adultBuffetPrice;
 		double buffetPriceForChildren = childrenBuffetPrice;
 		double totalPrice = buffetPriceForAdult + buffetPriceForChildren + priceOfSuite;
-
 		double hst = (totalPrice * 18) / 100;
 		double finalPrice = totalPrice + hst;
 		System.out.println("The total amount you will be charged is\r\n" + priceOfSuite + "			@" + noOfStayDays
