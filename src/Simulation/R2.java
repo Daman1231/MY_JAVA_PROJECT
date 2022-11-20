@@ -12,6 +12,8 @@ public class R2 extends Rocket {
 	public boolean land() {
 		// TODO Auto-generated method stub
 		int random = (int) (Math.random() * 100) + 1;
+		// if random is greater than given value then it will land otherwise will
+		// explode.
 		if (random > 8 * (maximumWeight / rocketWeight)) {
 			return true;
 		} else {

@@ -11,6 +11,10 @@ public class Item {
 		this.weight = weight;
 	}
 
+	public Item() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getName() {
 		return name;
 	}
